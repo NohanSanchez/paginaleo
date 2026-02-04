@@ -1,0 +1,747 @@
+:root {
+  --primario: #4DB6AC;
+  --primario-oscuro: #006064;
+  --primario-oscuro: #006064;
+  --blanco: #FFFFFF;
+  --amarillo: #FFEB3B;
+  --verde: #66BB6A;
+}
+
+body {
+  padding-top: 80px;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-size: cover;         /* Que cubra toda la pantalla */
+    background-position: center;    /* Centrada */
+    background-repeat: no-repeat;   /* Que no se repita */
+    background-attachment: fixed;
+}
+
+/* Ocultar hamburguesa en escritorio */
+.nav-toggle {
+  display: none;
+}
+
+/* Header */
+.site-header {
+  background: var(--primario-oscuro);
+  padding: 15px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--blanco);
+}
+
+.logo span {
+  color: var(--amarillo);
+}
+
+.main-nav {
+  display: flex;
+  gap: 25px;
+}
+
+.main-nav a {
+  color: var(--blanco);
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.main-nav a:hover {
+  color: var(--amarillo);
+}
+
+/* WhatsApp */
+.btn-whatsapp-header {
+  background: var(--verde);
+  color: var(--blanco);
+  padding: 8px 15px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.btn-whatsapp-header:hover {
+  background: var(--amarillo);
+  color: var(--primario-oscuro);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+  .nav-toggle {
+    display: block;   /* ahora sí aparece solo en móvil */
+    font-size: 1.8rem;
+    color: var(--blanco);
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .main-nav {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    background: var(--primario-oscuro);
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 0;
+    display: none;
+  }
+
+  .main-nav.active {
+    display: flex;
+  }
+
+  .main-nav a {
+    padding: 15px 0;
+    display: block;
+    font-size: 1.2rem;
+  }
+
+  .btn-whatsapp-header {
+    display: none;
+  }
+}
+
+/* HERO PROFESIONAL */
+.hero {
+  position: relative;
+  min-height: calc(100vh - 80px);
+  background: url("img/hero-aves.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(245, 252, 249, 0.85);
+}
+
+
+.hero-content {
+  position: relative;
+  max-width: 900px;
+  text-align: center;
+  z-index: 2;
+}
+
+.hero-tag {
+  display: inline-block;
+  background: var(--primario);
+  color: white;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.hero-content h1 {
+  font-size: 2.8rem;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: var(--primario-oscuro);
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.hero-trust {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  font-weight: 600;
+  color: var(--primario-oscuro);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .hero-trust {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+
+
+.btn-primario {
+    background: var(--primario);
+    color: var(--blanco);
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: .2s;
+}
+
+.btn-primario:hover {
+    background: var(--verde);
+}
+
+.btn-secundario {
+    background: var(--amarillo);
+    color: var(--primario-oscuro);
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: .2s;
+}
+
+.btn-secundario:hover {
+    filter: brightness(0.9);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero {
+        padding: 40px 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+}
+
+.sobre-medico {
+  padding: 60px 20px;
+  background: var(--blanco);
+  text-align: center;
+}
+
+.sobre-medico h2 {
+  color: var(--primario-oscuro);
+  margin-bottom: 15px;
+}
+
+.sobre-medico p {
+  max-width: 700px;
+  margin: 0 auto 20px;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.sobre-medico ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sobre-medico li {
+  font-size: 1.05rem;
+  margin: 8px 0;
+  color: var(--primario-oscuro);
+  font-weight: 600;
+}
+
+.servicios {
+  padding: 60px 20px;
+  background: #f4ffff;
+  text-align: center;
+}
+
+.servicios h2 {
+  color: var(--primario-oscuro);
+}
+
+.servicios-grid {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.servicio-card {
+  background: var(--primario);
+  color: var(--blanco);
+  padding: 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: .2s;
+}
+
+.servicio-card:hover {
+  background: var(--primario-oscuro);
+}
+
+.aves {
+  padding: 60px 20px;
+  background: #ffffff;
+  text-align: center;
+}
+
+.aves h2 {
+  color: var(--primario-oscuro);
+  margin-bottom: 30px;
+}
+
+.aves-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.ave-card {
+  background: #f4ffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.ave-card h3 {
+  color: var(--primario-oscuro);
+  margin-bottom: 10px;
+}
+
+.ave-card p {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+.ave-card a {
+  display: inline-block;
+  background: var(--verde);
+  color: var(--blanco);
+  padding: 10px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.ave-card a:hover {
+  background: var(--amarillo);
+  color: var(--primario-oscuro);
+}
+
+.informacion,
+.aves,
+.servicios,
+.contacto {
+  padding: 80px 20px;
+}
+
+/* Link activo del menú */
+.main-nav a.active {
+  color: var(--amarillo);
+  border-bottom: 2px solid var(--amarillo);
+  padding-bottom: 4px;
+}
+
+/* SOBRE NOSOTROS PROFESIONAL */
+.informacion {
+  background: #f9fefe;
+}
+
+.info-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 80px 20px;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.info-texto h2 {
+  color: var(--primario-oscuro);
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+.info-destacado {
+  font-size: 1.2rem;
+  color: var(--primario);
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.info-texto p {
+  font-size: 1.05rem;
+  color: #333;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.info-lista {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.info-lista li {
+  font-size: 1.05rem;
+  margin-bottom: 10px;
+  color: var(--primario-oscuro);
+  font-weight: 600;
+}
+
+.info-datos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.dato-box {
+  background: white;
+  border-radius: 14px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+  transition: transform .2s;
+}
+
+.dato-box:hover {
+  transform: translateY(-5px);
+}
+
+.dato-box span {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.dato-box p {
+  font-weight: 600;
+  color: var(--primario-oscuro);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .info-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .info-datos {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* SECCIÓN AVES (TIPOS) */
+.aves {
+  background: #ffffff;
+}
+
+.aves-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 80px 20px;
+}
+
+.aves-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 50px;
+}
+
+.aves-header h2 {
+  font-size: 2.4rem;
+  color: var(--primario-oscuro);
+  margin-bottom: 15px;
+}
+
+.aves-header p {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+.aves-tipos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+.ave-tipo-card {
+  background: #f4ffff;
+  border-radius: 20px;
+  padding: 40px 30px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: transform .25s, box-shadow .25s;
+}
+
+.ave-tipo-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+}
+
+.ave-tipo-card span {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.ave-tipo-card h3 {
+  font-size: 1.5rem;
+  color: var(--primario-oscuro);
+  margin-bottom: 12px;
+}
+
+.ave-tipo-card p {
+  font-size: 1.05rem;
+  color: #333;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.ave-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 14px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+
+
+/* CONTACTO PROFESIONAL */
+.contacto {
+  background: #f4ffff;
+}
+
+.contacto-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 80px 20px;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.contacto-info h2 {
+  font-size: 2.4rem;
+  color: var(--primario-oscuro);
+  margin-bottom: 15px;
+}
+
+.contacto-descripcion {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.contacto-datos {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.contacto-datos li {
+  font-size: 1.05rem;
+  margin-bottom: 10px;
+  color: var(--primario-oscuro);
+}
+
+.btn-contacto-whatsapp {
+  display: inline-block;
+  background: var(--verde);
+  color: var(--blanco);
+  padding: 14px 28px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: .2s;
+}
+
+.btn-contacto-whatsapp:hover {
+  background: var(--amarillo);
+  color: var(--primario-oscuro);
+}
+
+/* LADO DERECHO */
+.contacto-extra {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.contacto-card {
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+}
+
+.contacto-card span {
+  font-size: 2.2rem;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.contacto-card h4 {
+  color: var(--primario-oscuro);
+  margin-bottom: 8px;
+}
+
+.contacto-card p {
+  color: #333;
+  font-size: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contacto-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .contacto-extra {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .contacto-extra {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* SERVICIOS MÉDICOS AVIAR */
+.servicios {
+  background: #ffffff;
+}
+
+.servicios-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 80px 20px;
+}
+
+.servicios-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 50px;
+}
+
+.servicios-header h2 {
+  font-size: 2.4rem;
+  color: var(--primario-oscuro);
+  margin-bottom: 15px;
+}
+
+.servicios-header p {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+.servicios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.servicio-card {
+  background: #f4ffff;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+  text-align: center;
+  transition: transform .2s, box-shadow .2s;
+}
+
+.servicio-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.12);
+}
+
+.servicio-card span {
+  font-size: 2.6rem;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.servicio-card h3 {
+  color: var(--primario-oscuro);
+  margin-bottom: 12px;
+  font-size: 1.3rem;
+}
+
+.servicio-card p {
+  color: #333;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.servicios-cta {
+  margin-top: 50px;
+  text-align: center;
+}
+
+
+.hero-ornamento {
+  background: linear-gradient(
+    rgba(255,255,255,0.9),
+    rgba(255,255,255,0.9)
+  );
+  min-height: 50vh;
+}
+
+.aves-listado {
+  padding: 80px 20px;
+  background: #ffffff;
+}
+
+.hero-granja {
+  background: linear-gradient(
+    rgba(255,255,255,0.9),
+    rgba(255,255,255,0.9)
+  );
+  min-height: 50vh;
+}
+
+
