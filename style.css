@@ -744,4 +744,30 @@ body {
   min-height: 50vh;
 }
 
+/* FOOTER */
+.site-footer {
+  background: var(--primario-oscuro);
+  color: var(--blanco);
+  text-align: center;
+  padding: 25px 15px;
+  margin-top: 60px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.site-footer p {
+  margin: 5px 0;
+  font-size: 0.95rem;
+}
+
+.footer-credit {
+  font-size: 0.85rem;
+  opacity: 0.85;
+}
+
+
+
 
