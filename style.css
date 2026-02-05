@@ -126,7 +126,7 @@ body {
 .hero {
   position: relative;
   min-height: calc(100vh - 80px);
-  background: url("img/hero-aves.jpg") center/cover no-repeat;
+  background: url("img/fondoprincipal.jpeg") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -137,7 +137,7 @@ body {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(245, 252, 249, 0.85);
+  background: rgba(0, 0, 0, 0);
 }
 
 
@@ -157,6 +157,7 @@ body {
   font-size: 0.9rem;
   font-weight: 600;
   margin-bottom: 20px;
+  
 }
 
 .hero-content h1 {
@@ -168,7 +169,7 @@ body {
 
 .hero-content p {
   font-size: 1.2rem;
-  color: #333;
+  color: #000000;
   margin-bottom: 30px;
   line-height: 1.6;
 }
@@ -185,7 +186,7 @@ body {
   gap: 25px;
   justify-content: center;
   font-weight: 600;
-  color: var(--primario-oscuro);
+  color: var(#000000);
 }
 
 /* Responsive */
@@ -600,6 +601,46 @@ body {
   color: var(--primario-oscuro);
 }
 
+.btn-info {
+  width: 100%;
+  margin-top: 10px;
+  padding: 12px 16px;
+
+  background: linear-gradient(135deg, var(--primario), var(--primario-oscuro));
+  color: var(--blanco);
+
+  border: none;
+  border-radius: 10px;
+
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  transition: all 0.25s ease;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.btn-info::before {
+  content: "ℹ️";
+  font-size: 1.1rem;
+}
+
+.btn-info:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.2);
+  filter: brightness(1.05);
+}
+
+.btn-info:active {
+  transform: scale(0.97);
+}
+
+
 /* LADO DERECHO */
 .contacto-extra {
   display: grid;
@@ -767,6 +808,111 @@ body {
   font-size: 0.85rem;
   opacity: 0.85;
 }
+
+/* MODAL AVES */
+/* FONDO DEL MODAL */
+/* FONDO OSCURO */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+  z-index: 9999;
+}
+
+/* Modal activo */
+.modal.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* CAJA BLANCA */
+.modal-content {
+  background: #ffffff;
+  max-width: 500px;
+  width: 90%;
+  border-radius: 16px;
+  padding: 22px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+/* IMAGEN CONTROLADA */
+.modal-content img {
+  width: 100%;
+  max-height: 240px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  background: #f3f3f3;
+}
+
+/* BOTÓN CERRAR (X) */
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  font-size: 26px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.modal-close:hover {
+  color: #e53935;
+}
+
+.ave-intro {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 14px;
+  line-height: 1.5;
+}
+
+.ave-info p {
+  margin: 6px 0;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.ave-info strong {
+  color: var(--primario-oscuro);
+}
+
+.hero-outline {
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: #ffffff;
+  -webkit-text-stroke: 1.5px #000;
+  text-stroke: 1.5px #000;
+  text-align: center;
+  line-height: 1.2;
+}
+@media (max-width: 768px) {
+  .hero-outline {
+    font-size: 1.9rem;
+    -webkit-text-stroke: 1px #000;
+  }
+}
+
+.hero-text {
+  font-size: 1.1rem;
+  color: #333;
+  max-width: 700px;
+  margin: 20px auto;
+  line-height: 1.5;
+}
+
 
 
 
