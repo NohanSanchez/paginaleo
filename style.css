@@ -542,6 +542,15 @@ body {
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
+@media (max-width: 768px) {
+  .ave-card img {
+    height: 200px;
+    object-fit: contain;   /* 👈 clave */
+    background: #f3f3f3;   /* relleno elegante */
+  }
+}
+
+
 
 
 /* CONTACTO PROFESIONAL */
@@ -912,6 +921,24 @@ body {
   margin: 20px auto;
   line-height: 1.5;
 }
+
+/* Contenido del modal */
+#modal-desc {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* Botón WhatsApp dentro del modal */
+#modal-whatsapp {
+  display: inline-block;
+  margin-top: 10px;
+}
+@media (max-width: 768px) {
+  #modal-whatsapp {
+    margin-top: 15px;
+  }
+}
+
 
 
 
